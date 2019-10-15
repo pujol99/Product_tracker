@@ -41,7 +41,7 @@ def main():
 	
 	#add the graphics of your product prices
 	for img in imgs:
-		with open(imgs_path + '\\' + img, 'rb') as f:
+		with open(IMGS_PATH + '\\' + img, 'rb') as f:
 			file_data = f.read()
 			file_type = imghdr.what(f.name)
 			file_name = f.name
