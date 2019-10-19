@@ -8,7 +8,7 @@ Program that scrapes data from multiple product selling webpages, stores that da
 - bs4 module -> pip install bs4
 - requests module -> pip install requests
 
-if you want to `send feedback to yourself` or others you will have to prepare your mail account, to do it follow the first 2 minutes of this video https://www.youtube.com/watch?v=JRCJ6RtE3xU and then remember to fill your information in the `send_feedback.py` file
+if you want to `send feedback to yourself via mail` or others you will have to prepare your mail account, to do it follow the first 2 minutes of this video https://www.youtube.com/watch?v=JRCJ6RtE3xU and then remember to fill your information in the `send_feedback.py` file
 
 
 # Load program
