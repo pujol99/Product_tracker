@@ -29,7 +29,7 @@ def main():
 
 		elif 'amazon' in url:								#find price inside AMAZON
 			soup = BeautifulSoup(soup.prettify(), 'html.parser')
-			price = soup.find(id= 'riceblock_ourprice')
+			price = soup.find(id= 'priceblock_ourprice')
 			price = price.get_text()[:-5]
 		
 		#add price to the history & create graphic with all data
