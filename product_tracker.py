@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import matplotlib.pyplot as plt
 import datetime
 
-TODAY = str(datetime.date.today())
+TODAY = str(datetime.date.today().day)
 HEADERS = {
 	"User-Agent":'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36'}
 
@@ -60,8 +60,8 @@ def create_graphic(prices, days, title):
 	#create plot for png image
 	plt.title(title)
 	plt.plot(days, prices)
-	plt.xlabel('Price')
-	plt.ylabel('Datetime')
+	plt.xlabel('Datetime')
+	plt.ylabel('Price')
 	plt.savefig(path_img)
 	plt.close()
 	
