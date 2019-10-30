@@ -17,10 +17,24 @@ def start():
 	else:
 		main()
 
+def build_link_list(urls):
+	text = ''
+	for url in urls:
+		text += """<a href=" """ + url + """ ">""" + url[:50] + """</a>
+					<br>"""
+	return text
+	
+
 def main():
 	#local variables
 	today = datetime.date.today()
 	imgs = listdir(IMGS_PATH)
+	DB_PATH = IMGS_PATH.split('\\')[:-1]
+	DB_PATH = '\\'.join(DB_PATH) + '\\database\\products_url.txt'
+	
+	with open(DB_PATH) as f:
+		content = f.readlines()
+	content = [x.strip() for x in content] 
 	
 	#build mail
 	msg = EmailMessage()
@@ -35,6 +49,9 @@ def main():
 			<body>
 				<h1 style="color:Red;"
 					align="center">Product updates of """ + str(today) + """</h1>
+				<ul style="list-style-type:circle;">
+					""" + build_link_list(content) + """
+				</ul>
 			</body>
 		</html>
 		""", subtype='html')
